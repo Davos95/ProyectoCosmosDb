@@ -56,6 +56,18 @@ namespace ProyectoCosmosDb.Repositories
             await this.client.DeleteDocumentAsync(uri);
         }
 
+        public List<Pelicula> GetPeliculas()
+        {
+            //Indicamos el numero de documentos a recuperar
+            FeedOptions options = new FeedOptions() { MaxItemCount = -1 }; //-1 te devuelven todos
+
+            String sql = "SELECT * FROM p";
+
+            Uri uri = UriFactory.CreateDocumentCollectionUri(this.bbdd, this.collection);
+            IQueryable<Pelicula> consulta = this.client.CreateDocumentQuery<Pelicula>(uri, sql, options);
+            return consulta.ToList();
+        }
+
         public List<Pelicula> BuscarPeliculasGenero(String genero)
         {
             //Indicamos que nos devuelvan todos los datos

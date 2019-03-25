@@ -23,3 +23,11 @@ C:\Users\AlumnoMCSD\source\repos\ProyectoCosmosDb\ProyectoCosmosDb\obj\Debug\net
 C:\Users\AlumnoMCSD\source\repos\ProyectoCosmosDb\ProyectoCosmosDb\obj\Debug\netcoreapp2.1\Razor\Views\_ViewStart.g.cshtml.cs
 C:\Users\AlumnoMCSD\source\repos\ProyectoCosmosDb\ProyectoCosmosDb\obj\Debug\netcoreapp2.1\ProyectoCosmosDb.RazorTargetAssemblyInfo.cache
 C:\Users\AlumnoMCSD\source\repos\ProyectoCosmosDb\ProyectoCosmosDb\obj\Debug\netcoreapp2.1\ProyectoCosmosDb.RazorTargetAssemblyInfo.cs
+C:\Users\AlumnoMCSD\source\repos\ProyectoCosmosDb\ProyectoCosmosDb\bin\Debug\netcoreapp2.1\Microsoft.Azure.Documents.ServiceInterop.dll
+C:\Users\AlumnoMCSD\source\repos\ProyectoCosmosDb\ProyectoCosmosDb\bin\Debug\netcoreapp2.1\ProyectoCosmosDb.pdb
+C:\Users\AlumnoMCSD\source\repos\ProyectoCosmosDb\ProyectoCosmosDb\bin\Debug\netcoreapp2.1\ProyectoCosmosDb.Views.dll
+C:\Users\AlumnoMCSD\source\repos\ProyectoCosmosDb\ProyectoCosmosDb\bin\Debug\netcoreapp2.1\ProyectoCosmosDb.Views.pdb
+C:\Users\AlumnoMCSD\source\repos\ProyectoCosmosDb\ProyectoCosmosDb\obj\Debug\netcoreapp2.1\ProyectoCosmosDb.Views.pdb
+C:\Users\AlumnoMCSD\source\repos\ProyectoCosmosDb\ProyectoCosmosDb\obj\Debug\netcoreapp2.1\ProyectoCosmosDb.dll
+C:\Users\AlumnoMCSD\source\repos\ProyectoCosmosDb\ProyectoCosmosDb\obj\Debug\netcoreapp2.1\ProyectoCosmosDb.pdb
+C:\Users\AlumnoMCSD\source\repos\ProyectoCosmosDb\ProyectoCosmosDb\obj\Debug\netcoreapp2.1\ProyectoCosmosDb.csproj.CopyComplete
