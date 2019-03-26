@@ -1,9 +1,11 @@
 ﻿using Microsoft.Azure.Documents;
 using Microsoft.Azure.Documents.Client;
 using Microsoft.Extensions.Configuration;
+using Newtonsoft.Json;
 using ProyectoCosmosDb.Models;
 using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 
@@ -61,7 +63,7 @@ namespace ProyectoCosmosDb.Repositories
             //Indicamos el numero de documentos a recuperar
             FeedOptions options = new FeedOptions() { MaxItemCount = -1 }; //-1 te devuelven todos
 
-            String sql = "SELECT * FROM p";
+            String sql = "SELECT * FROM c";
 
             Uri uri = UriFactory.CreateDocumentCollectionUri(this.bbdd, this.collection);
             IQueryable<Pelicula> consulta = this.client.CreateDocumentQuery<Pelicula>(uri, sql, options);
@@ -78,6 +80,51 @@ namespace ProyectoCosmosDb.Repositories
                     .Where(x => x.Genero == genero);
             return query.ToList();
         }
+
+        public async Task<Pelicula> BuscarPeliculaAsync(String idPelicula)
+        {
+            Document document = await this.client.ReadDocumentAsync(UriFactory.CreateDocumentUri(this.bbdd, this.collection, idPelicula));
+            MemoryStream memory = new MemoryStream();
+            using (var stream = new StreamReader(memory))
+            {
+                document.SaveTo(memory);
+                memory.Position = 0;
+                Pelicula pelicula = JsonConvert.DeserializeObject<Pelicula>(await stream.ReadToEndAsync());
+
+                return pelicula;
+            }
+        }
+
+
+        public List<Pelicula> CrearPeliculas()
+        {
+            List<Pelicula> peliculas = new List<Pelicula>();
+            Pelicula peli = new Pelicula
+            {
+                Id = "1",
+                Titulo = "Regreso al futuro",
+                TituloOriginal = "Back to the future",
+                Genero = "SCIFI",
+                Sinopsis = "",
+                Imagen = ""
+            };
+            peliculas.Add(peli);
+            Pelicula peli2 = new Pelicula
+            {
+                Id = "2",
+                Titulo = "Spiderman: un nuevo universo",
+                TituloOriginal = "Spiderman into spiderverse",
+                Genero = "Animacion",
+                Sinopsis = "",
+                Imagen = ""
+            };
+            peliculas.Add(peli2);
+            return peliculas;
+        }
+
+
+
+
 
     }
 }

@@ -13347,11 +13347,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\AlumnoMCSD\\source\\repos\\ProyectoCosmosDb\\ProyectoCosmosDb\\ProyectoCosmosDb.csproj",
+      "projectUniqueName": "C:\\Users\\AlumnoMCSD\\source\\Github\\ProyectoCosmosDb\\ProyectoCosmosDb\\ProyectoCosmosDb\\ProyectoCosmosDb.csproj",
       "projectName": "ProyectoCosmosDb",
-      "projectPath": "C:\\Users\\AlumnoMCSD\\source\\repos\\ProyectoCosmosDb\\ProyectoCosmosDb\\ProyectoCosmosDb.csproj",
+      "projectPath": "C:\\Users\\AlumnoMCSD\\source\\Github\\ProyectoCosmosDb\\ProyectoCosmosDb\\ProyectoCosmosDb\\ProyectoCosmosDb.csproj",
       "packagesPath": "C:\\Users\\AlumnoMCSD\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\AlumnoMCSD\\source\\repos\\ProyectoCosmosDb\\ProyectoCosmosDb\\obj\\",
+      "outputPath": "C:\\Users\\AlumnoMCSD\\source\\Github\\ProyectoCosmosDb\\ProyectoCosmosDb\\ProyectoCosmosDb\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"

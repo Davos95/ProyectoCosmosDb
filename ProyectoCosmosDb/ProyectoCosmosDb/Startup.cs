@@ -9,6 +9,7 @@ using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using ProyectoCosmosDb.Repositories;
 
 namespace ProyectoCosmosDb
 {
@@ -31,7 +32,7 @@ namespace ProyectoCosmosDb
                 options.MinimumSameSitePolicy = SameSiteMode.None;
             });
 
-
+            services.AddTransient<RepositoryCosmosDb>();
             services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
         }
 
@@ -56,7 +57,7 @@ namespace ProyectoCosmosDb
             {
                 routes.MapRoute(
                     name: "default",
-                    template: "{controller=Home}/{action=Index}/{id?}");
+                    template: "{controller=Peliculas}/{action=Index}/{id?}");
             });
         }
     }
