@@ -8,9 +8,15 @@
 <h2>Peliculas</h2>
 
 <p>
-    <a asp-action="Create">Crear nueva pelicula</a>
+    <a asp-action="CrearPelicula">Crear nueva pelicula</a>
 </p>
 
+<form method="post">
+    <input type="text" placeholder="Buscar por genero" name="genero" /> 
+    <button type="submit" class="btn btn-success">Buscar</button>
+</form>
+@if(Model.Count() > 0)
+{
 <table class="table">
     <thead>
         <tr>
@@ -36,20 +42,23 @@
         </tr>
     </thead>
     <tbody>
-@foreach (Pelicula p in Model) {
-        <tr>
-            <td>@p.Id</td>
-            <td>@p.Titulo</td>
-            <td>@p.TituloOriginal</td>
-            <td>@p.Sinopsis</td>
-            <td>@p.Genero</td>
-            <td>@p.Imagen</td>
-            <td>
-                @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
-                @Html.ActionLink("Details", "Details", new { idPelicula = p.Id  }) |
-                @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
-            </td>
-        </tr>
-}
+        @foreach (Pelicula p in Model)
+        {
+            <tr>
+                <td>@p.Id</td>
+                <td>@p.Titulo</td>
+                <td>@p.TituloOriginal</td>
+                <td style="width:500px;"><p>@p.Sinopsis</p></td>
+                <td>@p.Genero</td>
+                <td><img src=" @p.Imagen" style="width:130px; height:200px;" /></td>
+                <td>
+                    <p>@Html.ActionLink("Editar", "EditPelicula", new { idPelicula = p.Id })</p>  
+                   <p>@Html.ActionLink("Detalles", "DetallesPelicula", new { idPelicula = p.Id })</p> 
+                   <p>@Html.ActionLink("Eliminar", "EliminarPelicula", new { idPelicula = p.Id })</p> 
+                </td>
+            </tr>
+        }
     </tbody>
 </table>
+}
+

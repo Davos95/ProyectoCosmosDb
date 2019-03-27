@@ -5,16 +5,15 @@
 
 <h2>Index</h2>
 
-<p>
-    <a asp-action="Create">Create New</a>
-</p>
 <form method="post">
     <button name="accion" value="CREAR" class="btn btn-success">CREAR BBDD y Colection</button>
 </form>
 
-@Html.ActionLink("Ver Peliculas", "VerPeliculas")
 
-<h3>@ViewData["MENSAJE"]</h3>
-<h3>@ViewData["MENSAJE1"]</h3>
-<h3>@ViewData["MENSAJE2"]</h3>
+<h3>@Html.ActionLink("Ver Peliculas", "VerPeliculas")</h3>
+
+
+<h3 style="color: green">@ViewData["MENSAJE"]</h3>
+<h3 style="color: green">@ViewData["MENSAJE1"]</h3>
+<h3 style="color: green">@ViewData["MENSAJE2"]</h3>
 

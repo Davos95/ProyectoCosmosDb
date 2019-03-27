@@ -49,25 +49,50 @@ namespace ProyectoCosmosDb.Controllers
             return View(peliculas);
         }
 
-        public async Task<IActionResult> DetallesPeliculas(String idPelicula)
+        [HttpPost]
+        public IActionResult VerPeliculas(String genero)
+        {
+            List<Pelicula> peliculas = this.repo.BuscarPeliculasGenero(genero);
+            return View(peliculas);
+        }
+        public async Task<IActionResult> DetallesPelicula(String idPelicula)
         {
             Pelicula pelicula = await this.repo.BuscarPeliculaAsync(idPelicula);
             return View(pelicula);
         }
 
-        public async Task<IActionResult> EditPeliculas(String idPelicula)
+        public IActionResult CrearPelicula()
+        {
+            return View();
+        }
+
+        [HttpPost]
+        public async Task<IActionResult> CrearPelicula(Pelicula pelicula)
+        {
+            await this.repo.InsertarPelicula(pelicula);
+            return View();
+        }
+
+        public async Task<IActionResult> EditPelicula(String idPelicula)
         {
             Pelicula pelicula = await this.repo.BuscarPeliculaAsync(idPelicula);
             return View(pelicula);
         }
 
         [HttpPost]
-        public async Task<IActionResult> EditPeliculas(Pelicula pelicula)
+        public async Task<IActionResult> EditPelicula(Pelicula pelicula)
         {
             await this.repo.ModificarPelicula(pelicula);
             return RedirectToAction("VerPeliculas");
         }
 
+        public async Task<IActionResult> EliminarPelicula(String idPelicula)
+        {
+            await this.repo.EliminarPelicula(idPelicula);
+            return RedirectToAction("VerPeliculas");
+        }
+
+      
 
     }
 }

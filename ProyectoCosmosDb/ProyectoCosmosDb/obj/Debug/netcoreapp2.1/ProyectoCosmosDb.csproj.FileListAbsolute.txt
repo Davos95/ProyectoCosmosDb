@@ -66,3 +66,6 @@ C:\Users\AlumnoMCSD\source\Github\ProyectoCosmosDb\ProyectoCosmosDb\ProyectoCosm
 C:\Users\AlumnoMCSD\source\Github\ProyectoCosmosDb\ProyectoCosmosDb\ProyectoCosmosDb\obj\Debug\netcoreapp2.1\ProyectoCosmosDb.csproj.CopyComplete
 C:\Users\AlumnoMCSD\source\Github\ProyectoCosmosDb\ProyectoCosmosDb\ProyectoCosmosDb\obj\Debug\netcoreapp2.1\Razor\Views\Peliculas\Index.g.cshtml.cs
 C:\Users\AlumnoMCSD\source\Github\ProyectoCosmosDb\ProyectoCosmosDb\ProyectoCosmosDb\obj\Debug\netcoreapp2.1\Razor\Views\Peliculas\VerPeliculas.g.cshtml.cs
+C:\Users\AlumnoMCSD\source\Github\ProyectoCosmosDb\ProyectoCosmosDb\ProyectoCosmosDb\obj\Debug\netcoreapp2.1\Razor\Views\Peliculas\DetallesPelicula.g.cshtml.cs
+C:\Users\AlumnoMCSD\source\Github\ProyectoCosmosDb\ProyectoCosmosDb\ProyectoCosmosDb\obj\Debug\netcoreapp2.1\Razor\Views\Peliculas\EditPelicula.g.cshtml.cs
+C:\Users\AlumnoMCSD\source\Github\ProyectoCosmosDb\ProyectoCosmosDb\ProyectoCosmosDb\obj\Debug\netcoreapp2.1\Razor\Views\Peliculas\CrearPelicula.g.cshtml.cs
